@@ -36,13 +36,13 @@ def predict():
     count = (pred_RFC + pred_DT + pred_GBC + pred_LR + pred_KN)/5
 
     if count < 0.25:
-        return render_template('index.html', prediction_text='This news is False')
+        return render_template('index.html', prediction_text='This news is False 😞')
     elif count < 0.5:
-        return render_template('index.html', prediction_text='This might be False')
+        return render_template('index.html', prediction_text='This news might be False 😕')
     elif count < 0.75:
-        return render_template('index.html', prediction_text='This might be True')
+        return render_template('index.html', prediction_text='This news might be True 🙂')
     else:
-        return render_template('index.html', prediction_text='This news is True') 
+        return render_template('index.html', prediction_text='This news is True 😃') 
      
 
 

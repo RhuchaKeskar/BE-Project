@@ -48,9 +48,12 @@ body {background-color:#46344E;}
    <br>
    
    <div class="display-4" style="color: #FAED26; font-size: 30px; font-weight: 600;" >
-   {{ prediction_text[0] }}
-   <br><br>
-   {{ prediction_text[1] }}
+    {% if prediction_text %}
+        {{ prediction_text[0] }}
+        <br><br>
+        {{ prediction_text[1] }}
+
+    {% endif %}
   </div><br><br><br><br><br><br><br><br><br>
 
  </div>
